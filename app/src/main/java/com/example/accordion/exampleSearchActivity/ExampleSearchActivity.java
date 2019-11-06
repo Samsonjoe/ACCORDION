@@ -1,0 +1,59 @@
+package com.example.accordion.exampleSearchActivity;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+import com.example.accordion.R;
+import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
+
+
+public class ExampleSearchActivity extends AppCompatActivity implements View.OnClickListener {
+
+    public static void startActivity(Context context) {
+        context.startActivity(new Intent(context, ExampleSearchActivity.class));
+    }
+
+    private Button mExpandButton;
+    private ExpandableRelativeLayout mExpandLayout;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_example_search);
+
+        getSupportActionBar().setTitle(ExampleSearchActivity.class.getSimpleName());
+
+        mExpandButton = (Button) findViewById(R.id.expandButton);
+        mExpandLayout = (ExpandableRelativeLayout) findViewById(R.id.expandableLayout);
+        mExpandButton.setOnClickListener(this);
+
+        final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this,1));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        final ArrayList data = new ArrayList();
+        for(int i = 0; i < 15; i++) {
+            data.add("Result");
+        }
+        recyclerView.setAdapter(new ExampleSearchRecyclerAdapter(data));
+    }
+
+    @Override
+    public void onClick(final View v) {
+        switch (v.getId()) {
+            case R.id.expandButton:
+                mExpandLayout.expand();
+                break;
+        }
+    }
+}

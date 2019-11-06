@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/mainActivityRecycleViewMAIN"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Main Activity with Recycle View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+    <Button
+        android:id="@+id/expandableMAIN"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Expandable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/readMoreMAIN"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="READ MORE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/recyclerViewMAIN"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="RECYCLEVIEW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/expandableWeightMAIN"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="EXPANDABLE WEIGHT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/exampleSearchMAIN"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="EXAMPLE SEARCH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>
